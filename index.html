@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Maxbottz3D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg shadow fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">Maxbottz3D</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNav">
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#material">Material Didáctico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#botanico">Diseño Botánico</a>
+        </li>
+      </ul>
+
+      <input 
+        type="text" 
+        id="buscador" 
+        class="form-control buscador ms-3"
+        placeholder="Buscar..."
+        onkeyup="buscarProductos()"
+      >
+
+      <button class="btn btn-outline-light ms-3" onclick="comprarSeleccionados()">
+        Comprar seleccionados
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<section class="hero text-center">
+  <h1>Impresiones 3D de Calidad</h1>
+  <p>Diseños personalizados y material didáctico educativo</p>
+</section>
+
+<!-- MATERIAL DIDÁCTICO -->
+<section id="material" class="seccion-productos">
+  <div class="container">
+    <h2 class="titulo-seccion">Material Didáctico</h2>
+    <div class="row" id="contenedorMaterial"></div>
+  </div>
+</section>
+
+<!-- DISEÑO BOTÁNICO -->
+<section id="botanico" class="seccion-productos bg-light">
+  <div class="container">
+    <h2 class="titulo-seccion">Diseño Botánico Avanzado</h2>
+    <div class="row" id="contenedorBotanico"></div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modalImagen" class="modal-imagen">
+  <span class="cerrar">&times;</span>
+  <img class="modal-contenido" id="imagenAmpliada">
+  <div id="descripcionModal" class="descripcion-modal"></div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
